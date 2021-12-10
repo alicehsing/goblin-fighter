@@ -27,7 +27,8 @@ body {
     --gutter: 30px;
     --footer-height: 25px;
     
-    font-family: 'Titillium Web', sans-serif;
+    /* font-family: 'Titillium Web', sans-serif; */
+    font-family: 'Space Mono', monospace;
     background-color: var(--color2);
     background-image: url(../assets/fight-scene.webp);
     background-size: cover;
@@ -60,7 +61,6 @@ header {
     box-shadow: var(--shadow);
 }
 
-
 h2 {
     font-size: 1.8rem;
     font-weight: bold;
@@ -89,8 +89,8 @@ footer {
     box-shadow: var(--shadow);
 }
 
-.adventurer-stats {
-    border: solid 2px honeydew;
+.player-stats {
+    /* border: solid 2px honeydew; */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -100,25 +100,30 @@ footer {
     margin: 20px;
 }
 
-.adventurer p {
-    background-color: brown;
+.player p {
+    background-color: rgb(175, 36, 36);
     color: rgb(250, 248, 248);
     border-radius: 15px;
     padding: 20px;
     text-align: center;
     margin-left: 180px;
-    height: 60px;
+    height: 100px;
     width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: larger;
+    font-family: 'Space Mono', monospace;
 }
 
-.adventurer img{
+.player img{
     position: relative;
     left: 200px;
     margin-bottom: 50px;
 
 }
 .defeated-goblins {
-    border: solid 2px rgb(100, 100, 100);
+    /* border: solid 2px rgb(100, 100, 100); */
     border-radius: 10px;
     margin-top: 20px;
     margin-bottom: 120px;
@@ -130,14 +135,13 @@ footer {
     background-color: rgb(23, 27, 87);
     padding: 20px;
     border-radius: 15px;
+    width: 400px;
+    text-align: center;
 
-}
-.defeated-list {
-    border: solid 2px rgb(223, 154, 154);
 }
 
 .goblin-stats {
-    border: solid 2px honeydew;
+    /* border: solid 2px honeydew; */
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -152,10 +156,9 @@ form {
     display: flex;
 }
 
-.goblin{
-    border: solid 3px #a082a7;
+form button {
+    background-color:rgb(179, 224, 171);
 }
-
 .goblin-stats input, .goblin-stats button {
     margin-top: 40px;
     height: 50px;
@@ -175,4 +178,40 @@ form {
 }
 .goblins {
     border: solid 2px rgb(138, 202, 138);
+}
+
+.goblin-list {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.goblin-img {
+    width: 120px;
+}
+
+.goblin {
+    cursor: pointer;
+    /* border: solid 3px #a082a7; */
+    border-radius: 10px;
+    margin: 10px;
+    font-size: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: rgb(3, 9, 21);
+    background-color: cornsilk;
+    opacity: 0.5;
+    width:480px;
+}
+
+.dead {
+    cursor: default;
+}
+
+.game-over {
+    transform: rotate(90deg);
 }

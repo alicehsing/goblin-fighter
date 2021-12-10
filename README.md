@@ -9,7 +9,11 @@ A 'destination' for:
       their HP
 - defeated goblins (top let of the page)
 
-## Clickables
+## Initial State
+- player HP: 10
+- goblins=[{name: 'Jolly', HP: 3 }, {}, {}]
+-defeatedGoblins = 0
+### Clickables
 
 - Each goblin is clickable
   On click . . .

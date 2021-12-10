@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Pacifico&family=Space+Mono&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/style.css">
     <link rel="stylesheet" href="./styles/home.css">
@@ -19,16 +22,16 @@
         </div>
     </header>
     <main>
-        <div class="adventurer-stats">
+        <div class="player-stats">
             <div class="defeated-goblins">
                 <p>You have defeated <span id="defeated-number">0</span> goblins</p>
                 <div class="defeated-list">
 
                 </div>
             </div>
-            <div class="adventurer">
-                <p>Your HP: <span id="adventurer-hp">10</span></p>
-                <img src="./assets/warrior.webp">
+            <div class="player">
+                <p>Your HP: &nbsp <span id="player-hp"> 10</span></p>
+                <img id="player-img" src="./assets/warrior.webp">
             </div>
         </div>
         <div class="goblin-stats">
@@ -37,7 +40,7 @@
                     <input name="goblin-name" placeholder="Goblin Name">
                     <button>Challenge New Goblin</button>
                 </form>
-                <div class="goblins">
+                <div class="goblin-list">
 
                 </div>
             </div>
