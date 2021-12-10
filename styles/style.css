@@ -29,14 +29,13 @@ body {
     
     font-family: 'Titillium Web', sans-serif;
     background-color: var(--color2);
+    background-image: url(../assets/fight-scene.webp);
+    background-size: cover;
 }
 
 main {
+    height: 100%;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: calc(var(--footer-height));
 }
 
 section {
@@ -88,4 +87,92 @@ footer {
     justify-content: flex-end;
     background-color: var(--color3);
     box-shadow: var(--shadow);
+}
+
+.adventurer-stats {
+    border: solid 2px honeydew;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 40%;
+    height: 80%;
+    margin: 20px;
+}
+
+.adventurer p {
+    background-color: brown;
+    color: rgb(250, 248, 248);
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    margin-left: 180px;
+    height: 60px;
+    width: 200px;
+}
+
+.adventurer img{
+    position: relative;
+    left: 200px;
+    margin-bottom: 50px;
+
+}
+.defeated-goblins {
+    border: solid 2px rgb(100, 100, 100);
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 120px;
+}
+
+.defeated-goblins p {
+    font-size: 1.3rem;
+    color: rgb(250, 248, 248);
+    background-color: rgb(23, 27, 87);
+    padding: 20px;
+    border-radius: 15px;
+
+}
+.defeated-list {
+    border: solid 2px rgb(223, 154, 154);
+}
+
+.goblin-stats {
+    border: solid 2px honeydew;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 60%;
+    height: 80%;
+    margin: 20px;
+}
+
+form {
+    padding: 20px ;
+    display: flex;
+}
+
+.goblin{
+    border: solid 3px #a082a7;
+}
+
+.goblin-stats input, .goblin-stats button {
+    margin-top: 40px;
+    height: 50px;
+    width: 200px;
+    margin: 10px;
+    border-radius: 10px;
+    font-size: larger;
+}
+
+.goblin-stats button {
+    font-size: 1em;
+}
+
+.goblin-stats input {
+    font-size: 1em;
+    width: 300px;
+}
+.goblins {
+    border: solid 2px rgb(138, 202, 138);
 }
