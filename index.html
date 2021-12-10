@@ -16,29 +16,25 @@
 </head>
 
 <body>
-    <header>
-        <div class="gutter-right logo">
-            <img src="./assets/big-logo.png" />
-        </div>
-    </header>
+
     <main>
         <div class="player-stats">
             <div class="defeated-goblins">
-                <p>You have defeated <span id="defeated-number">0</span> goblins</p>
+                <p id="defeated-goblins-display">You have defeated <span id="defeated-number">0</span> goblins</p>
                 <div class="defeated-list">
 
                 </div>
             </div>
             <div class="player">
                 <p>Your HP: &nbsp <span id="player-hp"> 10</span></p>
-                <img id="player-img" src="./assets/warrior.webp">
+                <img id="player-img" src="./assets/warrior-a.webp">
             </div>
         </div>
         <div class="goblin-stats">
             <div>
                 <form>
-                    <input name="goblin-name" placeholder="Goblin Name">
-                    <button>Challenge New Goblin</button>
+                    <input name="goblin-name" placeholder="Name Your Goblin">
+                    <button class="glow-on-hover">Challenge New Goblin</button>
                 </form>
                 <div class="goblin-list">
 

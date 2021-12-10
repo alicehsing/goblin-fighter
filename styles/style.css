@@ -107,7 +107,7 @@ footer {
     padding: 20px;
     text-align: center;
     margin-left: 180px;
-    height: 100px;
+    height: 80px;
     width: 200px;
     display: flex;
     align-items: center;
@@ -120,33 +120,50 @@ footer {
     position: relative;
     left: 200px;
     margin-bottom: 50px;
+}
 
+.defeated-list {
+    display: flex;
+    flex-direction: row;
+}
+
+#defeated-goblins-display {
+    font-size: 1.5rem;
+    width: 500px;
+    padding: 10px;
 }
 .defeated-goblins {
-    /* border: solid 2px rgb(100, 100, 100); */
     border-radius: 10px;
     margin-top: 20px;
-    margin-bottom: 120px;
+    margin-bottom: 20px;
+    margin-left: 20px;
 }
 
 .defeated-goblins p {
-    font-size: 1.3rem;
+    font-size: 1rem;
     color: rgb(250, 248, 248);
     background-color: rgb(23, 27, 87);
-    padding: 20px;
-    border-radius: 15px;
-    width: 400px;
+    border-radius: 10px;
     text-align: center;
+}
 
+.defeated-goblins img {
+    width: 50px;
+    height: 50px;
+    text-align: center;
+}
+
+.defeated-goblins .goblin{
+    width:80px;
+    background-color: rgb(19, 18, 18);
 }
 
 .goblin-stats {
-    /* border: solid 2px honeydew; */
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    width: 60%;
+    width: 100%;
     height: 80%;
     margin: 20px;
 }
@@ -159,6 +176,66 @@ form {
 form button {
     background-color:rgb(179, 224, 171);
 }
+
+.glow-on-hover {
+    width: 220px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover:active {
+    color: #000
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
 .goblin-stats input, .goblin-stats button {
     margin-top: 40px;
     height: 50px;
@@ -181,15 +258,20 @@ form button {
 }
 
 .goblin-list {
-    margin-top: 50px;
+    margin-top: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
+    height: 700px;
+    width: 700px;
+    overflow-x: auto;
 }
 
 .goblin-img {
-    width: 120px;
+    width: 100px;
+    height: 100px;
 }
 
 .goblin {
@@ -197,21 +279,59 @@ form button {
     /* border: solid 3px #a082a7; */
     border-radius: 10px;
     margin: 10px;
-    font-size: 2rem;
+    font-size: 1.5rem;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    justify-content:space-evenly;
+    align-items:center;
     color: rgb(3, 9, 21);
     background-color: cornsilk;
     opacity: 0.5;
-    width:480px;
+    width: 200px;
+    height: 230px;
+}
+
+.goblin p {
+    margin: none;
 }
 
 .dead {
     cursor: default;
+    background-color: rgb(19, 18, 18);
 }
 
 .game-over {
     transform: rotate(90deg);
+}
+
+.player-killed-one {
+    position: relative;
+    left: 100px;
+    margin-bottom: 50px;
+    width: 250px;
+    height: 320px;
+}
+
+.player-killed-two {
+    position: relative;
+    left: 100px;
+    margin-bottom: 50px;
+    width: 250px;
+    height: 320px;
+}
+
+.player-killed-three {
+    position: relative;
+    left: 100px;
+    margin-bottom: 50px;
+    width: 250px;
+    height: 320px;
+}
+
+.player-killed-four {
+    position: relative;
+    left: 100px;
+    margin-bottom: 50px;
+    width: 250px;
+    height: 320px;
 }
