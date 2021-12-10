@@ -9,7 +9,7 @@ export function renderGoblin(goblinData) {
 
     nameEl.textContent = goblinData.name;
     hpEl.textContent = `HP: ${goblinData.hp < 0 ? 0 : goblinData.hp}`;
-    faceEl.src = '../assets/goblin.webp';
+    faceEl.src = './assets/goblin.webp';
 
      //render defeated goblins
     if (goblinData.hp === 0) {
